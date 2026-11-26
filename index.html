@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operating Systems Virtual Laboratory — Interactive OS Simulators</title>
+    <meta
+      name="description"
+      content="Interactive browser-based Operating Systems Virtual Laboratory featuring CPU Scheduling, Memory Allocation, Page Replacement, Banker's Algorithm, Process Synchronization, Disk Scheduling, File Management, and a Linux Command Simulator."
+    />
+    <meta
+      name="keywords"
+      content="Operating Systems Virtual Lab, CPU Scheduling Simulator, Gantt Chart, Page Replacement FIFO LRU Optimal, Banker's Algorithm, Disk Scheduling SCAN LOOK, Memory Allocation First Fit Best Fit, Linux Command Simulator, Producer Consumer Semaphore"
+    />
+    <meta name="author" content="Sopan Dabhade, Ritik Bhavle" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Social & AI Search -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Operating Systems Virtual Laboratory — Interactive OS Simulators" />
+    <meta
+      property="og:description"
+      content="Step-by-step interactive simulators for CPU Scheduling, Memory Allocation, Page Replacement, Synchronization, Banker's Algorithm, Disk Scheduling, File Management, and Linux CLI."
+    />
+    <meta property="og:site_name" content="OS Virtual Laboratory" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Operating Systems Virtual Laboratory" />
+    <meta
+      name="twitter:description"
+      content="Interactive OS algorithm simulators with step-by-step explanations, Gantt charts, and lab report export."
+    />
+
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="theme-color" content="#FFFFFF" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Structured Data (Schema.org) for Search Engines & AI Search -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Operating Systems Virtual Laboratory",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "Any (Web Browser)",
+        "description": "Interactive Operating Systems Virtual Laboratory with 8 deterministic OS simulators: Linux Terminal, CPU Scheduling, Process Synchronization, Banker's Algorithm, Memory Allocation, Page Replacement, Disk Scheduling, and File Management.",
+        "author": [
+          { "@type": "Person", "name": "Sopan Dabhade" },
+          { "@type": "Person", "name": "Ritik Bhavle" }
+        ],
+        "educationalUse": "Simulation, Laboratory Practical, Self-Assessment",
+        "isAccessibleForFree": true
+      }
+    </script>
+  </head>
+  <body class="bg-white text-slate-900 antialiased selection:bg-blue-100 selection:text-blue-900">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

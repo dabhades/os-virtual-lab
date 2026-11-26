@@ -1,0 +1,9 @@
+{
+  "name": "OS Virtual Laboratory",
+  "short_name": "OS Lab",
+  "description": "Interactive Operating Systems Virtual Laboratory for students.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#FFFFFF"
+}

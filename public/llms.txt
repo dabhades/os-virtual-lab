@@ -1,0 +1,16 @@
+# Operating Systems Virtual Laboratory
+
+> Interactive, browser-based Operating Systems simulators for college students and learners. Presented by Sopan Dabhade and Ritik Bhavle to Prof. S.D. Gavande.
+
+## Simulators
+- [Linux / UNIX Command Simulator](/labs/linux-terminal): Isolated Ubuntu-style virtual shell with FHS directory tree (`/bin`, `/etc`, `/home`, `/proc`, `/var/log`), pipes (`|`), redirection (`>`, `>>`, `<`), permissions, and Tab autocomplete.
+- [CPU Scheduling](/labs/cpu-scheduling): FCFS, SJF, SRTF, Priority (Preemptive & Non-preemptive), Round Robin, and HRRN with Gantt Chart, Process Results Table, and 7-algorithm comparison chart.
+- [Process Synchronization & Semaphores](/labs/synchronization): Critical Section, Race Condition, Mutex, Binary/Counting Semaphores, Producer–Consumer, Dining Philosophers, and Readers–Writers.
+- [Banker's Algorithm](/labs/bankers-algorithm): Safety Algorithm, Need matrix (`Max - Allocation`), Resource Request validation, and unsafe-state rollback.
+- [Memory Allocation](/labs/memory-allocation): First Fit, Best Fit, Worst Fit, Next Fit, Fixed/Variable Partitioning, Fragmentation metrics, and Compaction.
+- [Page Replacement](/labs/page-replacement): FIFO, LRU, Optimal, LFU, and Second Chance (Clock) with Belady's Anomaly demonstration.
+- [Disk Scheduling](/labs/disk-scheduling): FCFS, SSTF, SCAN, C-SCAN, LOOK, and C-LOOK with 2D seek trajectory and 3D platter view.
+- [File Management](/labs/file-management): Contiguous, Linked, and Indexed allocation across Single-Level, Two-Level, Tree, and Acyclic Graph directories.
+
+## Reference
+- [OS Reference Hub](/explore): Searchable OS Glossary, Exam Formula Reference, and Concept Map.
