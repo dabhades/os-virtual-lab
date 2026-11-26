@@ -4,6 +4,12 @@ import { AppLayout } from './components/layout/AppLayout';
 import { LabErrorBoundary } from './components/common/LabErrorBoundary';
 import { useAppStore } from './core/useAppStore';
 
+const HomePage = lazy(() =>
+  import('./features/home/HomePage').then((m) => ({
+    default: m.HomePage,
+  }))
+);
+
 const LabsCataloguePage = lazy(() =>
   import('./features/labs/LabsCataloguePage').then((m) => ({
     default: m.LabsCataloguePage,
@@ -83,7 +89,7 @@ export function App() {
         <LabErrorBoundary>
           <Suspense fallback={<RouteLoadingFallback />}>
             <Routes>
-              <Route path="/" element={<Navigate to="/labs" replace />} />
+              <Route path="/" element={<HomePage />} />
               <Route path="/labs" element={<LabsCataloguePage />} />
               <Route path="/labs/cpu-scheduling" element={<CpuSchedulingLabPage />} />
               <Route path="/labs/memory-allocation" element={<MemoryAllocationLabPage />} />
