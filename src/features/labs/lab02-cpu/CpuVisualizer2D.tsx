@@ -27,7 +27,7 @@ interface CpuVisualizer2DProps {
 }
 
 export function CpuVisualizer2D({ state }: CpuVisualizer2DProps) {
-  if (!state) {
+  if (!state || !Array.isArray(state.ganttSegments)) {
     return (
       <div className="flex h-64 flex-col items-center justify-center rounded-xl border border-dashed border-slate-200 bg-slate-50 p-6 text-center">
         <h3 className="text-sm font-semibold text-slate-900">

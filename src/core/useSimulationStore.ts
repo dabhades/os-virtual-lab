@@ -166,7 +166,17 @@ export const useSimulationStore = create<SimulationStoreState>((set, get) => {
 
     dispose: () => {
       clearTimer();
-      set({ timerId: null });
+      const freshController = new SimulationController<
+        unknown,
+        unknown,
+        unknown,
+        unknown
+      >();
+      set({
+        controller: freshController,
+        snapshot: freshController.getSnapshot(),
+        timerId: null,
+      });
     },
   };
 });

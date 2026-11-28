@@ -2,7 +2,7 @@ import type { MemoryStepState } from '../../../engines/memoryAllocation/types';
 import { getPidColor } from '../lab02-cpu/CpuVisualizer2D';
 
 export function MemoryVisualizer2D({ state }: { state: MemoryStepState | null }) {
-  if (!state) {
+  if (!state || !Array.isArray(state.blocks)) {
     return (
       <div className="flex h-56 items-center justify-center rounded-xl border border-dashed border-subtle bg-canvas/50 text-sm text-slate-500">
         Configure RAM and operations to visualize memory blocks.

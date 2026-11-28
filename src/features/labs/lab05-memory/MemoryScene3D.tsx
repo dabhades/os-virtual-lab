@@ -3,7 +3,7 @@ import { OrbitControls, Text } from '@react-three/drei';
 import type { MemoryStepState } from '../../../engines/memoryAllocation/types';
 
 export function MemoryScene3D({ state }: { state: MemoryStepState | null }) {
-  if (!state) return null;
+  if (!state || !Array.isArray(state.blocks)) return null;
 
   const total = Math.max(
     1,
