@@ -1,17 +1,25 @@
 import { useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import {
   BookOpen,
   FlaskConical,
+  Home,
   Info,
   Search,
   SlidersHorizontal,
 } from 'lucide-react';
 import { useAppStore } from '../../core/useAppStore';
 
-const NAV_ITEMS = [
-  { to: '/labs', label: 'Simulators', icon: FlaskConical },
-  { to: '/explore', label: 'Reference', icon: BookOpen },
+const DESKTOP_NAV_ITEMS = [
+  { to: '/', label: 'Home', icon: Home, end: true },
+  { to: '/labs', label: 'Simulators', icon: FlaskConical, end: false },
+  { to: '/explore', label: 'Reference', icon: BookOpen, end: false },
+] as const;
+
+const MOBILE_NAV_ITEMS = [
+  { to: '/', label: 'Home', icon: Home, end: true },
+  { to: '/labs', label: 'Labs', icon: FlaskConical, end: false },
+  { to: '/explore', label: 'Reference', icon: BookOpen, end: false },
 ] as const;
 
 export function TopNav() {
@@ -32,21 +40,30 @@ export function TopNav() {
 
   return (
     <>
-      {/* Desktop Top Navigation (Centered Buttons) */}
+      {/* Desktop Top Navigation */}
       <header className="sticky top-0 z-40 hidden border-b border-slate-200 bg-white/95 backdrop-blur-xs md:block">
-        <div className="mx-auto grid h-14 max-w-7xl grid-cols-3 items-center px-6 lg:px-8">
-          <div />
+        <div className="mx-auto flex h-14 max-w-7xl items-center justify-between gap-4 px-6 lg:px-8">
+          <Link
+            to="/"
+            className="flex items-center gap-2 text-sm font-bold tracking-tight text-slate-900 hover:text-blue-600"
+          >
+            <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-blue-600 text-xs font-bold text-white">
+              OS
+            </span>
+            <span>OS Virtual Lab</span>
+          </Link>
 
           <nav
             aria-label="Primary navigation"
-            className="flex items-center justify-center gap-2"
+            className="flex items-center justify-center gap-1.5"
           >
-            {NAV_ITEMS.map(({ to, label, icon: Icon }) => (
+            {DESKTOP_NAV_ITEMS.map(({ to, label, icon: Icon, end }) => (
               <NavLink
                 key={to}
                 to={to}
+                end={end}
                 className={({ isActive }) =>
-                  `flex items-center gap-2 rounded-lg px-4 py-1.5 text-sm font-medium transition ${
+                  `flex items-center gap-2 rounded-lg px-3.5 py-1.5 text-sm font-medium transition ${
                     isActive
                       ? 'bg-blue-50 text-blue-700'
                       : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
@@ -60,7 +77,7 @@ export function TopNav() {
             <button
               type="button"
               onClick={() => setAboutOpen(true)}
-              className="flex items-center gap-2 rounded-lg px-4 py-1.5 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-slate-900"
+              className="flex items-center gap-2 rounded-lg px-3.5 py-1.5 text-sm font-medium text-slate-600 transition hover:bg-slate-100 hover:text-slate-900"
             >
               <Info className="h-4 w-4" aria-hidden="true" />
               <span>About</span>
@@ -99,10 +116,11 @@ export function TopNav() {
         className="fixed inset-x-0 bottom-0 z-40 border-t border-slate-200 bg-white/95 backdrop-blur-xs md:hidden"
       >
         <div className="grid grid-cols-5 items-center py-1.5">
-          {NAV_ITEMS.map(({ to, label, icon: Icon }) => (
+          {MOBILE_NAV_ITEMS.map(({ to, label, icon: Icon, end }) => (
             <NavLink
               key={to}
               to={to}
+              end={end}
               className={({ isActive }) =>
                 `flex flex-col items-center justify-center gap-1 py-1 text-[11px] font-medium ${
                   isActive ? 'text-blue-600' : 'text-slate-500'
@@ -113,15 +131,6 @@ export function TopNav() {
               <span>{label}</span>
             </NavLink>
           ))}
-
-          <button
-            type="button"
-            onClick={() => setAboutOpen(true)}
-            className="flex flex-col items-center justify-center gap-1 py-1 text-[11px] font-medium text-slate-500"
-          >
-            <Info className="h-4 w-4" aria-hidden="true" />
-            <span>About</span>
-          </button>
 
           <button
             type="button"

@@ -29,7 +29,7 @@ export function ExplainerToast({
     <aside
       role="status"
       aria-live="polite"
-      className="fixed right-4 bottom-20 z-30 w-[min(92vw,24rem)] rounded-xl border border-blue-200 bg-white p-3.5 shadow-lg md:bottom-5"
+      className="fixed inset-x-3 bottom-20 z-30 rounded-xl border border-blue-200 bg-white p-3.5 shadow-lg md:inset-x-auto md:right-5 md:bottom-5 md:w-96"
     >
       <div className="mb-1.5 flex items-center justify-between gap-2">
         <div className="flex items-center gap-1.5 text-xs font-semibold text-blue-700">
