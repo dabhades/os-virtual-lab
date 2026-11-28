@@ -17,7 +17,7 @@ export function AppLayout({ children }: { children: ReactNode }) {
       <footer className="mb-14 border-t border-slate-200 bg-white py-4 text-center text-xs text-slate-500 md:mb-0">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           Presented by <strong className="font-medium text-slate-700">Sopan Dabhade</strong> &amp;{' '}
-          <strong className="font-medium text-slate-700">Ritik Bhavle</strong> · Presented to{' '}
+          <strong className="font-medium text-slate-700">Vaibhav Bondre</strong> · Presented to{' '}
           <strong className="font-medium text-slate-700">Prof. S.D. Gavande</strong> ·{' '}
           <button
             type="button"

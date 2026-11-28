@@ -2,7 +2,7 @@
 
 An interactive, browser-based Operating Systems Virtual Laboratory built with React, TypeScript, Vite, Tailwind CSS, Zustand, and React Three Fiber.
 
-**Presented by:** Sopan Dabhade & Ritik Bhavle  
+**Presented by:** Sopan Dabhade & Vaibhav Bondre  
 **Presented to:** Prof. S.D. Gavande
 
 ## Included Simulators

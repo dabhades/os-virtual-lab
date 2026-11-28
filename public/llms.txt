@@ -1,6 +1,6 @@
 # Operating Systems Virtual Laboratory
 
-> Interactive, browser-based Operating Systems simulators for college students and learners. Presented by Sopan Dabhade and Ritik Bhavle to Prof. S.D. Gavande.
+> Interactive, browser-based Operating Systems simulators for college students and learners. Presented by Sopan Dabhade and Vaibhav Bondre to Prof. S.D. Gavande.
 
 ## Simulators
 - [Linux / UNIX Command Simulator](/labs/linux-terminal): Isolated Ubuntu-style virtual shell with FHS directory tree (`/bin`, `/etc`, `/home`, `/proc`, `/var/log`), pipes (`|`), redirection (`>`, `>>`, `<`), permissions, and Tab autocomplete.

@@ -58,7 +58,7 @@ export function AboutModal() {
           </div>
           <ul className="space-y-1 font-medium text-slate-900">
             <li>Sopan Dabhade</li>
-            <li>Ritik Bhavle</li>
+            <li>Vaibhav Bondre</li>
           </ul>
         </div>
 
